@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="[Alex Pritchard first HTML and CSS 11/28/17]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Char</title>
+  <style id="football-css">
+  </style>
+<style id="jsbin-css">
+body {background-image:url(https://www.mensfitness.com/sites/mensfitness.com/files/money_football_fantasy_sports_main_0.jpg);
+   background-size:cover;
+  background-position:left;
+  background-repeat:no-repeat;
+  margin-bottom:750px;
+
+
+
+
+}
+
+.teams{font-size:20px;
+        text-decoration:bolder;
+
+
+
+
+
+}
+</style>
+</head>
+<body>
+  <h1 class="title">Pick'em</h1>
+  <h2>This weeks Teams</h2>
+  <ol>
+    <form action="mailto:zander.pritchard@gmail.com" method="post" enctype="text/plain">
+      Name:<input type="text" name="firstname"><br>
+
+
+      Teams:<br>
+
+      <div class="teams">
+      Saints  vs. Faclons<br>
+      <input type="radio" name="game-one" value="Saints">Saints<br>
+      <input type="radio" name="game-one" value="Falcons">Falcons<br>
+      Packers vs.Browns<br>
+      <input type="radio" name="game-two" value="Packers">Packers<br>
+      <input type="radio" name="game-two" value="Browns">Browns<br>
+      Lions vs. Buccaneers<br>
+      <input type="radio" name="game-three" value="Lions">Lions<br>
+      <input type="radio" name="game-three" value="Buccaneers">Buccaneers<br>
+      Raiders vs. Chiefs<br>
+      <input type="radio" name="game-four" value="Raiders">Raiders<br>
+      <input type="radio" name="game-four" value="Chiefs">Chiefs<br>
+      Vikings vs. Panthers<br>
+      <input type="radio" name="game-five" value="Vikings">Vikings<br>
+      <input type="radio" name="game-five" value="Panthers">Panthers<br>
+      49ers vs. Texans<br>
+      <input type="radio" name="game-six" value="49ers">49ers<br>
+      <input type="radio" name="game-sex" value="Texans">Texans<br>
+      Colts vs. Bills<br>
+      <input type="radio" name="game-seven" value="Colts">Colts<br>
+      <input type="radio" name="game-seven" value="Bills">Bills<br>
+      Bears vs. Bengals<br>
+      <input type="radio" name="game-eight" value="Bears">Bears<br>
+      <input type="radio" name="game-eight" value="Bengals">Bengals<br>
+      Cowboys vs. Giants<br>
+      <input type="radio" name="game-nine" value="Cowboys">Cowboys<br>
+      <input type="radio" name="game-nine" value="Giants">Giants<br>
+      Titans vs. Cardinals<br>
+      <input type="radio" name="game-ten" value="Titans">Titans<br>
+      <input type="radio" name="game-ten" value="Cardinals">Cardinals<br>
+      Jets vs. Broncos<br>
+      <input type="radio" name="game-eleven" value="Jets">Goddamn Jets<br>
+      <input type="radio" name="game-eleven" value="Broncos">Broncos<br>
+      Redskins vs. Chargers<br>
+      <input type="radio" name="game-twelve" value="Redskins">Redskins<br>
+      <input type="radio" name="game-twelve" value="Chargers">Chargers<br>
+      Seahawks vs. Jaguars<br>
+      <input type="radio" name="game-thirteen" value="Seahawks">Seahawks<br>
+      <input type="radio" name="game-thirteen" value="Jaguars">Jaguars<br>
+      Eagles vs. Rams<br>
+      <input type="radio" name="game-fourteen" value="Eagles">Eagles<br>
+      <input type="radio" name="game-fourteen" value="Rams">Rams<br>
+      Ravens vs. Steelers<br>
+      <input type="radio" name="game-fifteen" value="Ravens">Ravens<br>
+      <input type="radio" name="game-fifteen" value="Steelers">Steelers<br>
+      Patriots vs. Dolphins<br>
+      <input type="radio" name="game-sixteen" value="Patriots">Patriots<br>
+      <input type="radio" name="game-sixteen" value="Dolphins">Dolphins<br>
+
+      </div>
+      <br>
+      <br>
+      <input type="submit" value="Send"/>
+
+
+
+
+
+
+
+
+    </form>
+
+
+  </ol>
