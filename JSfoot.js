@@ -1,8 +1,8 @@
 var foot = function(){
   var results = [];
   for (var i = 0; i < teams.length; i++) {
-    var time = teams[i].charAt(0);
-    if (time === "E") {
+    var firstletter = teams[i].charAt(0);
+    if (firstletter === "E") {
       results.push("Superbowl Champions for 2018 are the Philadelphia " + teams[i] + ' ! ');
 
     } else {
