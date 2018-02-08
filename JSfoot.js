@@ -10,13 +10,27 @@ var foot = function(){
     }
   }
   return results;
-}
+};
+///object//
+var choice = {
+  Teams: [
+    {
+
+      winner: "Pick",
+      isRequired: true,
+      choices: [
+          "Eagles",
+          "Patriots"
+      ]
+    }
+  ]
+};
 
 
 
 
 
-
+///nflteams///
 var teams = ['Eagles',
              'Cowboys',
              'Giants',
