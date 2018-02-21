@@ -1,111 +1,185 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="description" content="[Alex Pritchard first HTML and CSS 11/28/17]">
+  <meta name="description" content="[Alex Pritchard first HTML and CSS 11/28/17]">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Char</title>
-  <style id="football-css">
+  <style id="jsbin-css">
+    body {
+      background-image: url(https://www.mensfitness.com/sites/mensfitness.com/files/money_football_fantasy_sports_main_0.jpg);
+      background-size:cover;
+      background-position:left;
+      background-repeat:no-repeat;
+      margin-bottom:750px;
+    }
+
+    .teams{
+      font-size:20px;
+      text-decoration:bolder;
+    }
   </style>
-<style id="jsbin-css">
-body {background-image:url(https://www.mensfitness.com/sites/mensfitness.com/files/money_football_fantasy_sports_main_0.jpg);
-   background-size:cover;
-  background-position:left;
-  background-repeat:no-repeat;
-  margin-bottom:750px;
+  <script>
+    var foot = function() {
+      var results = [];
+      for (var i = 0; i < teams.length; i++) {
+        var firstletter = teams[i].charAt(0);
+        if (firstletter === "E") {
+          results.push("Superbowl Champions for 2018 are the Philadelphia " + teams[i] + ' ! ');
+        } else {
+          results.push(team[i] + " did not win anything...");
+        }
+      }
+      return results;
+    };
+
+    ///nflteams///
+    var teams = ['Eagles',
+                 'Cowboys',
+                 'Giants',
+                 'Redskins',
+                 'Patriots',
+                 'Dolphins',
+                 'Jets',
+                 'Bills',
+                 'Chiefs',
+                 'Raiders',
+                 'Chargers',
+                 'Broncos',
+                 'Steelers',
+                 'Ravens',
+                 'Bengals',
+                 'Browns',
+                 'Jaguars',
+                 'Titans',
+                 'Colts',
+                 'Texans',
+                 'Rams',
+                 'Seahawks',
+                 'Cardinals',
+                 '49ers',
+                 'Vikings',
+                 'Packers',
+                 'Lions',
+                 'Bears',
+                 'Saints',
+                 'Panters',
+                 'Falcons',
+                 'Buccaneers',
+                 'Bye'
+    ];
+    //console.log foot()
 
 
+    // parse the file
+
+    // for each game...
+
+    // create radio buttons for each team
 
 
-}
+    /**
+     * Finds the first numeric character in the input string
+     */
+    var findFirstNumber = function(input) {
+      var ALL_NUMBERS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-.teams{font-size:20px;
-        text-decoration:bolder;
+      // loop through all the characters...
+      for (var i = 0; i < input.length; i++) {
+        // get the character at the index
+        var character = input.charAt(i);
+
+        // check if it is a number
+        var isNumber = ALL_NUMBERS.includes(character);
+
+        // if the character is a number, return the index
+        if (isNumber) {
+          return i;
+        }
+      }
+    }
+
+    var teamNameToRadioInput = function(teamName, name) {
+      var inputElement = document.createElement('input'); // this basically creates this: <input>
+      inputElement.setAttribute('type', 'radio'); // this makes it like this: <input type="radio">
+      inputElement.setAttribute('name', name); // this makes it like this: <input type="radio" name="#">
+      inputElement.innerHTML = teamName; // this makes it like this: <input type="radio" name="#">TEAM</input>
+      return inputElement;
+    }
+
+    var createInputElements = function(team1, team2) {
+
+    };
+
+    var parseFileToArray = function(filename) {
+
+    };
 
 
-//the best thing is to keep working...
-//keep moving forward keep putting in the hours
+    var inputs = [
+        'New York Jets at Buffalo Bills 1:00p (ET) 1:00p CBS',
+        'Atlanta Falcons at Chicago Bears 12:00p (CT) 1:00p FOX'
+    ];
 
+    for (var i = 0; i < inputs.length; i++) {
+      // get the game data
+      // example: New York Jets at Buffalo Bills 1:00p (ET) 1:00p CBS
+      var gameData = inputs[i];
 
-}
-</style>
+      // split game data on the word "at"
+      // this should give an array with the following contents
+      // [0]: New York Jets
+      // [1]: Buffalo Bills 1:00p (ET) 1:00p CBS
+      var gameDataTokens = gameData.split("at");
+      var firstTeamName = gameDataTokens[0];
+
+      // find the first number of the second string
+      // to get the second team name
+      var digitIndex = findFirstNumber(gameDataTokens[1]);
+      var secondTeamName = gameDataTokens[1].substring(0, digitIndex);
+
+      // now that we have the team names, create the radio buttons for each team
+      // the HTML syntax is <input type="radio">
+      // the type of element is "input", the type attribute is "radio"
+      // the two radio buttons must also have the same "name" attribute so they are mutually exclusive
+      var firstTeamInput = teamNameToRadioInput(firstTeamName, i);
+      var secondTeamInput = teamNameToRadioInput(secondTeamName, i);
+
+      console.log(firstTeamInput);
+      alert(firstTeamInput);
+      alert(secondTeamInput);
+      alert("works");
+    }
+      //a => radio buttons (/2)
+      //g => groups (/16)
+      //var answers = 2;
+      //var groups = 16;
+      //loopfor groups of radio buttons
+      //function loopMe(groups, answers){
+        //for(g = 1; <= group; g++){
+        //  for(a = 1; a <= answer; a++){
+          //  echo '<input type="radio" name="RadioGroup'.g.'" value="'.a.'">'.a'<br>';
+      //  }
+    //  }
+    //}
+
+  </script>
 </head>
 <body>
   <h1 class="title">Pick'em</h1>
   <h2>This weeks Teams</h2>
-    <div>
-      <p><iframe src="Week1.txt" width=400 height=400 frameborder=0></iframe></p>
-    </div>
+  <div>
+    <p><iframe src="Week1.txt" width=400 height=400 frameborder=0></iframe></p>
+  </div>
 
-  <form action="mailto:zander.pritchard@gmail.com" method="post" enctype="text/plain">
-      Name:<input type="text" name="firstname"><br>
-
-
-<script>
-var foot = function(){
-  var results = [];
-  for (var i = 0; i < teams.length; i++) {
-    var firstletter = teams[i].charAt(0);
-    if (firstletter === "E") {
-      results.push("Superbowl Champions for 2018 are the Philadelphia " + teams[i] + ' ! ');
-
-    } else {
-        results.push(team[i] + " did not win anything...");
-    }
-  }
-  return results;
-};
-
-
-///nflteams///
-var teams = ['Eagles',
-             'Cowboys',
-             'Giants',
-             'Redskins',
-             'Patriots',
-             'Dolphins',
-             'Jets',
-             'Bills',
-             'Chiefs',
-             'Raiders',
-             'Chargers',
-             'Broncos',
-             'Steelers',
-             'Ravens',
-             'Bengals',
-             'Browns',
-             'Jaguars',
-             'Titans',
-             'Colts',
-             'Texans',
-             'Rams',
-             'Seahawks',
-             'Cardinals',
-             '49ers',
-             'Vikings',
-             'Packers',
-             'Lions',
-             'Bears',
-             'Saints',
-             'Panters',
-             'Falcons',
-             'Buccaneers',
-             'Bye'
-];
-
-console.log foot()
-
-</script>
-      <input type="submit" value="Send"/>
-
-
-
-
-
-
-
-
-    </form>
-
-
-  </ol>
+  <form action="mailto:zander.pritchard@gmail.com"
+        method="post"
+        enctype="text/plain">
+    Name:<input type="text" name="firstname"><br>
+    <ol>
+      <input type="radio" id="RadioGroup" value="'.a.'" menthod =(loopMe)>
+    </ol>
+    <input type="submit" value="Send"/>
+  </form>
+</body>
+</html>
